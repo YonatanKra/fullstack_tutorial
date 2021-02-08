@@ -4,4 +4,15 @@ const PORT = 3000;
 
 app.use(express.static('client'));
 
+app.get('/getData', (request, response) => {
+   response.json([
+       'I',
+       'Spy',
+       'With',
+       'My',
+       'Little',
+       'Eye'
+   ]);
+});
+
 app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
